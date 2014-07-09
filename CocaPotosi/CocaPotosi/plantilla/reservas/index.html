@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block contenedor %}
+<style type="text/css">
+	p{
+		font-size: 20px;
+	}
+</style>
+
+{% for p in productos %}
+<table class="table" stile="background-color:rgb(216,213,213);">
+<theader>
+<tr>
+<p>
+ <strong>Nombre: </strong></th>{{p.nombre}}
+</p>
+  
+  {% for a in p.model_almacen_set.select_related.all %}
+    <p>
+      <strong>Cantidad: </strong>{{a.stock}}
+    </p>
+  {%empty%}
+  <p>No tiene Almacen</p>
+  {%endfor%}
+{% endfor %}
+</tr>
+<p>
+  <h1><a href="{% url 'reserva.views.clientes' %}">Crear Reserva</a></h1>
+</p>
+{% endblock %}

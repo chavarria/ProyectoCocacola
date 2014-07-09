@@ -1,0 +1,317 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Coca Cola | Potosi</title>
+    {% block cabesa %}<script src="{{STATIC_URL}}jquery.min.js"></script>{% endblock %}
+    
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      #principal_x {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background: #000000;
+        height: auto;
+      }
+    </style>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}bootstrap/css/style.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}bootstrap/css/default.css" rel="stylesheet">
+	<title></title>
+</head>
+<body>
+{% block menu %}
+    <div class="navbar navbar-fixed-top">
+
+      <div class="navbar-inner">
+      
+        <div class="container">
+        
+        
+
+          <div class="span2"><a class="brand" href="#"><img src="{{STATIC_URL}}a.gif"  width="80%"></a></div><br><div class="span9" style="background-color:#9b0505; ">
+          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="/">HOME</a>
+              </li>
+              
+              <li class="active">
+                <a href="/noticias" >
+                      NOTICIAS
+                </a>
+              </li>
+              
+              <li class="active">
+                <a href="/promocion"> <!--class="dropdown-toggle" data-toggle="dropdown"-->
+                      PROMOCIONES
+                </a>
+              </li>  
+
+              <li class="active">
+                <a href="/productos1">PRODUCTOS</a>
+              </li>
+              
+              <li class="active">
+                <a href="/regiscliente">REGISTRO</a>
+              </li>
+              
+              <li class="active">
+                <a href="/acerca" >
+                    ACERCA 
+                </a>
+              </li>
+
+              <li class="active">
+                <a href="/listado">COMENTAR</a>
+              </li>
+
+
+            </ul>
+                          
+          </div>
+          </div><div align='right'><img src="{{STATIC_URL}}a.gif"  width="2%">
+      <a href='/logueo'>login</a></div><!-- /.container -->
+      </div>   
+        </div>
+
+    </div> 
+  </div>
+  </div>
+
+  <br>
+  <br>
+
+  <br>
+  <br>
+
+ {% endblock %}
+<div id="wrapper">
+	
+	<!-- start page -->
+
+	<div id="page">
+		<div id="sidebar1" class="sidebar">
+			<ul>
+				<li>
+					<h2>NUESTROS PRODUCTOS</h2>
+					<ul>
+						<li><a href="/productos">COCA COLA</a></li>
+						<li><a href="/productos">FANTA</a></li>
+						<li><a href="/productos">SPRITE</a></li>
+						<li><a href="/productos">AQUARIUS</a></li>
+						<li><a href="/productos">SIMBA</a></li>
+						<li><a href="/productos">POWERADE</a></li>
+						<li><a href="/productos">AGUA VITAL</a></li>
+						<li><a href="/productos">BURN</a></li>
+						<li><a href="/productos">MINERAGUA</a></li>
+						<li><a href="/productos">GINGERALE</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>COMENTARIOS RECIENTES</h2>
+					<ul>
+						<li><a href="/listado">NUEVA SUCURSAL MUY PRONTO</a> on <a href="/listado">COCA COLA zero</a></li>
+						<li><a href="/listado">La super mini cuando llega?</a> on <a href="/listado">hasta cuando es la promocion?</a></li>
+						<li><a href="/listado">muy buena la pagina</a> on <a href="/listado">si :)</a></li>
+						
+					</ul>
+				</li>
+				<li>
+					<h2>CATEGORIAS</h2>
+					<ul>
+						<li><a href="#">GASEOSAS</a></li>
+						<li><a href="#">JUGOS NATURALES</a></li>
+						<li><a href="#">ENERGIZANTES</a></li>
+						<li><a href="#">REHIDRATANTES</a></li>
+						<li><a href="#">AGUA</a></li>
+						<li><a href="#">LIGHT</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>Archivos</h2>
+					<ul>
+						<li><a href="#">Enero</a> (23)</li>
+						<li><a href="#">Febrero</a> (31)</li>
+						<li><a href="#">Marzo</a> (31)</li>
+						<li><a href="#">Abril</a> (30)</li>
+						<li><a href="#">Mayo</a> (31)</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- start content -->
+		<div id="content">
+			<div class="flower" width="510" height="250"><!--<img src="{{STATIC_URL}}bootstrap/img/fondo.jpg" alt="" width="510" height="250">-->
+				<video  controls="controls"  autoplay="autoplay" width="550px" height="250px" preload="preload">
+
+            
+              <source src="{{STATIC_URL}}bootstrap/img/copa.ogg" type="video/ogg"/>
+              <source src="{{STATIC_URL}}bootstrap/img/copa.mp4" type="video/mp4"/>
+              <source src="{{STATIC_URL}}bootstrap/img/copa.webm" type="video/webm"/>
+              Tu navegador no soporta video. Haz clic 
+              <a href="">AQUI</a> para descargar un navegador compatible</div>
+			<div class="post">
+				<h1 class="title"><a href="#">BIENVENIDO COCA COLA POTOSI!</a></h1>
+				<p class="byline"><small>Publicado 3 Julio, 2014 </small></p>
+				<div class="entry">
+					<p><strong>Coca Cola te presenta:</strong> Con la copa de Todos nos da la oportunidad de unir mas la familia, el mundial y sabor de coca cola te da la magia y energia <a href="http://www.cocacola.bo"> </a> Power tambien esta junto a los jugadores <a href="http://www.fifa.com"> mundial 2014 </a> Es una empresa emprendedora pensando en tu felicidad  :)</p>
+					<p class="links"><a href="#" class="more">&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+				</div>
+			</div>
+			<div class="post">
+				<h2 class="title"><a href="#">Una nueva oportunidad</a></h2>
+				<p class="byline"><small>Publicado 8 de Julio, 2014<a href="#">Una nueva oportunidad</a></small></p>
+				<div class="entry">
+					<h3>Ahora puedes hacer tus pedidos de qui:</h3>
+					<blockquote>
+						<p>Con esta nueva oportunidad coca cola te brinda este servicio para la comodidad de la poblacion de la ciudad de potosi.</p>
+					</blockquote>
+					<h3>Reservas:</h3>
+					<ul>
+						<li>Puedes hacer tus reservas de los diferentes productos que te ofrecemos. </li>
+						<li>Con un respectivo comprobante.</li>
+						<li>El pago se realiza en oficinas .</li>
+					</ul>
+										
+					
+				</div>
+			</div>
+			<div class="post">
+				<h2 class="title"><a href="#">Historia </a></h2>
+				<p class="byline"><small>Publicado 7 de Junio, 2014<a href="#"></a></small></p>
+				<div class="entry">
+					<p>Coca Coca empezo como un jarabe de tos, el fabricante tardaba en realizar solo uno en una hora cuando nacio coca cola se vendia y fabricaba en una tienda de la cual se realizaban en botellines pequeños solamente. En la actualidad la fabricacion es inmensa a nivel mundial. </p>
+					<p class="links"><a href="#" class="more">&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		<div id="sidebar2" class="sidebar">
+			<ul>
+				<li>
+					<form id="searchform" method="get" action="#">
+						<div>
+
+							<h2>sitema para el cliente</h2>
+							<!--<input type="text" name="s" id="s" size="15" value="">-->
+							<CENTER><p><a href="#"></CENTER>
+  <form id='formulario' method='post' action="">{% csrf_token %}
+    <table id='table' border='0' width='40%' rules='none' style="background:red;">
+      <tr><td colspan='2' align='center' id='camp'>INGRESE SUS DATOS</td> </tr>
+      <tr><td colspan='2' ></td> </tr>
+      <tr><td colspan='2' ></td> </tr>
+      <tr><td id='camp'>Usuario:</td><td class='formu'>{{formulario.nombre}}
+	  <input type='text' name='nombre'></td></tr>
+      <tr><td id='camp'>Contraseña:</td><td class='formu'>
+        <input type='password' name='ci'></td></tr>      
+      <tr><td colspan='2' align="center">
+        <input type='submit' value='Enviar' id='boton'/></td> </tr>     
+      <tr><td colspan='2' id='borde2'></td> </tr>     
+    </table>  
+    
+  </form> 
+						</div>
+					</form>
+				</li>
+				<li>
+					<h2> Registrate</h2>
+					<p class="tag">Ahora puedes<a href="/home">REGISTRATE</a> 
+				<li>
+					<h2>Calendario CocaCola</h2>
+					<div id="calendar_wrap">
+						<table summary="Calendar">
+							<caption>
+							Julio 2014
+							</caption>
+							<thead>
+								<tr>
+									<th abbr="Monday" scope="col" title="Monday">L</th>
+									<th abbr="Tuesday" scope="col" title="Tuesday">M</th>
+									<th abbr="Wednesday" scope="col" title="Wednesday">M</th>
+									<th abbr="Thursday" scope="col" title="Thursday">J</th>
+									<th abbr="Friday" scope="col" title="Friday">V</th>
+									<th abbr="Saturday" scope="col" title="Saturday">S</th>
+									<th abbr="Sunday" scope="col" title="Sunday">D</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<td abbr="Agosto" colspan="3" id="prev"><a href="#" title=" Julio 2014">« Agos</a></td>
+									<td class="pad">&nbsp;</td>
+									<td colspan="3" id="next">&nbsp;</td>
+								</tr>
+							</tfoot>
+							<tbody>
+								<tr>
+									<td>0</td>
+									<td>1</td>
+									<td>2</td>
+									<td id="today">3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>8</td>
+									<td>9</td>
+									<td>10</td>
+									<td>11</td>
+									<td>12</td>
+									<td>13</td>
+								</tr>
+								<tr>
+									<td>14</td>
+									<td>15</td>
+									<td>16</td>
+									<td>17</td>
+									<td>18</td>
+									<td>19</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>21</td>
+									<td>22</td>
+									<td>23</td>
+									<td>24</td>
+									<td>25</td>
+									<td>26</td>
+									<td>27</td>
+								</tr>
+								<tr>
+									<td>28</td>
+									<td>19</td>
+									<td>30</td>
+									<td>31</td>
+									<td class="pad" colspan="4">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li>
+					<h2>Noticias</h2>
+					<ul>
+						<li><a href="/noticias">Nueva promocion CocaCola</a></li>
+						<li><a href="/noticias">Problemas sobre el cierre de la empresa</a></li>
+						<li><a href="/noticias">Otra formula para la historia</a></li>
+						<li><a href="/noticias">Hay nuevo gerente en la empresa</a></li>
+						<li><a href="/noticias">Los Proveedores estan en un congreso</a></li>
+						<li><a href="/noticias">Aniversario de CocaCola Company</a></li>
+						<li><a href="/noticias">Cochabamba ahora nos brida proveedores</a></li>
+						<li><a href="/noticias">Hay nuevos puntos de canje</a></li>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+
+</body>
+</html>

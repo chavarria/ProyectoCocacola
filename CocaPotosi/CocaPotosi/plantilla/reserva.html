@@ -1,0 +1,33 @@
+  {% extends 'index.html' %}
+
+
+{% block contenedor %}
+ <center> <h2>Tuvo exito en el registro</h2></center>
+  {% for item in formulario %}
+  <div>
+   
+      <table border="5px" align="center">
+        <tr>
+          <td>
+            <h3>Categorias</h3>
+              <table class="table table-hover"border="8px">
+    <theader>
+      <tr>
+        <th>Categoria</th>
+        <th>Descripcion</th>
+       
+    
+    </theader>
+    <tbody>
+      
+           <td>{{item.nombre}}</td>
+            <td>{{item.descripcion}}</td>
+            <td><h3><a href="/categoria/{{item.id}}" class="btn btn-primary">mostrar</a></h3>
+          </td>
+       
+    </tbody>
+    
+  </div>
+    
+  {% endfor %}
+  {% endblock %}

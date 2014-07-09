@@ -1,0 +1,19 @@
+#camp{
+	font-size: 17px; 
+	color: #fff;
+}
+#table{
+	border-radius: 50px;
+	height: 200px;
+	width: 400px;
+}
+#titulo1{
+	color: red;
+}
+#capas{
+  border:1px solid·000;
+  display: inline-block;
+  height: 450px;
+  vertical-align: top;
+  width: 400px;
+}

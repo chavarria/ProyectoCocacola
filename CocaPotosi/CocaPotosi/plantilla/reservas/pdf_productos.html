@@ -1,0 +1,64 @@
+{# encoding=utf-8 #}
+<!DocType HTML>
+<html>
+<head>
+	<title></title>
+	<style>
+	@page {
+		size: letter landscape;
+		margin-left: 2.5cm;
+		margin-top: 1cm;
+		margin-right: 1cm;
+		margin-bottom: 1cm;
+		}
+
+	h2{
+		color:white;
+		display:block;
+		background:red;
+		height: 100px;
+		padding: 15px;
+		text-align: center;
+		font-size: 30px;
+	}
+
+
+	table{
+		border:black 1px solid;
+		padding: 5px;
+
+	}
+	th{
+		color:firebrick;
+		background: skyblue;
+
+	}
+	</style>
+</head>
+<body>
+	<div><h2>Nuestros Productos</h2></div>
+	<table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Nombre</th>
+				<th>Sabore</th>
+				<th>Contenido Neto</th>
+				<th>Precio</th>
+			</tr>
+		</thead>
+		<tbody>
+			{%for p in productos %}
+				<tr>
+					<td>{{forloop.counter}}</td>
+					<td>{{p.nombre}}</td>
+					<td>{{p.sabor}}</td>
+					<td>{{p.contenido_neto}}</td>
+					<td>{{p.precio}}</td>
+
+				</tr>
+			{% endfor%}
+		</tbody>
+	</table>
+</body>
+</html>

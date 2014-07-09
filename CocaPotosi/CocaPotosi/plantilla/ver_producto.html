@@ -1,0 +1,24 @@
+{% extends "index1.html" %}
+{% block contenedor %}
+	<br><center><h1 id='titulo1'> VER PRODUCTO </h1><br>
+	
+		{% for dato in formulario %}
+		<table border='5' width='50%' style="background:red;">{% csrf_token %}
+			<tr><td align='center' colspan="3">			
+			</td></tr>
+			<tr><td align='center' rowspan="7">
+			<img src="{{MEDIA_URL}}{{dato.fotografia}}" width='70%'>
+			</td></tr>
+			<tr><td width='10%'>Nombre</td><td width='20%'>{{dato.nombre}}</td></tr>
+			<tr><td id='camp'>Descripcion</td><td>{{dato.descripcion}}</td></tr>
+			<tr><td>Sabor</td><td>{{dato.sabor}}</td></tr>
+			<tr><td>Categoria</td><td>{{dato.id_cat}}</td></tr>
+			<tr><td>Precio</td><td>{{dato.precio}}</td></tr>
+			<tr><td>Stock</td><td>{{dato.stock}}</td></tr>
+			
+			
+			
+			</table><br><br>
+		{% endfor %} 
+	</center><br><br><br>
+{% endblock %}

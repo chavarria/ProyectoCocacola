@@ -1,0 +1,70 @@
+{# encoding=utf-8 #}
+<!DocType HTML>
+<html>
+<head>
+	<title></title>
+	<style>
+	@page {
+		size: letter landscape;
+		margin-left: 2.5cm;
+		margin-top: 1cm;
+		margin-right: 1cm;
+		margin-bottom: 1cm;
+		}
+	h1{
+		font-size: 30px;
+	}
+	h2{
+		color:white;
+		display:block;
+		background:red;
+		height: 100px;
+		padding: 10px;
+		text-align: center;
+		font-size: 30px;
+	}
+
+
+	table{
+		border:black 1px solid;
+		padding: 5px;
+
+	}
+	th{
+		color:firebrick;
+		background: skyblue;
+
+	}
+	</style>
+</head>
+
+<body>
+<img src="{{ model_producto.fotografia.path }}" />
+	<div><h2>Infromacion Reserva</h2></div>
+	<table width="80%" align="center ">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Fecha</th>
+				<th>Precio Total</th>
+				<th>Cliente</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for r in reserva %}
+				<tr>
+					<td>{{forloop.counter}}</td>
+					<td>{{r.fecha_reserva}}</td>
+					<td>{{r.precio_total}}</td>
+					<td>{{r.cliente}}</td>
+
+				</tr>
+
+			{% endfor%}
+		</tbody>
+
+
+	</table>
+</body>
+
+</html>

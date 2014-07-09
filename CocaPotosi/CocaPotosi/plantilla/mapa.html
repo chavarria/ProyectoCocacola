@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+
+
+{% block cabesa %}<script src="{{STATIC_URL}}jquery.min.js"></script>{% endblock %}
+<aside><div><img src="{{STATIC_URL}}bootstrap/img/b.gif"height="120px"width="150px" /></div></aside>
+
+{% block contenedor %}
+<div><img src="{{STATIC_URL}}bootstrap/img/b.gif"height="120px"width="150px" /></div>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/styles.css" type="text/css">
+
+	{# <h1>BIENVENIDO</h1> #}
+	<center>
+    <table id="tab"border>
+    <tr>
+
+	<div id="mapa" class="capas"></div>
+	<div id="datos" class="capas">
+
+		<div id="form">
+			<form action="/coords/save" method="post" id="form_coords">{% csrf_token %}
+				{{ form.as_p}}
+				<p>
+					<input type="submit" value="Guardar ubicacion">
+				</p>
+			</form>
+		</div>
+		<br><br><br><br>
+		<td id='td'>
+		<div id='data'>
+			<ul>
+				{% for ubicacion in ubicaciones %}
+					<li><h5>{{ ubicacion.nombre }} </h5>{{ ubicacion.user }} -hace{{ ubicacion.fecha|timesince }}</li>
+
+				{% endfor %}
+
+			</ul>
+				
+
+		</div>
+		</td></center>
+	</div>
+    </tr>
+    </table>
+{% endblock  %}

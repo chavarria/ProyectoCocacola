@@ -1,0 +1,43 @@
+body{
+	text-align: left;
+	background: #E6E6E6;
+
+}
+
+.tab{
+	text-align: left;
+}
+
+
+.container1{
+	background: #000;
+	/*border: 6px solid #000;*/
+	box-shadow: 0 0 90px #000;
+	border-radius: 20px;
+	height: 1000px;
+	margin: 0 auto;
+	padding: 5px;
+	width: 920px;
+	text-align: center;
+	color: white;
+}
+.capas {
+	border: 1px solid #fff;
+	display: inline-block;
+	height: 450px;
+	vertical-align: top;
+	width: 420px;
+	border-radius: 10px;
+}
+#form{
+	border-bottom: 1px solid #000;
+	height: 250px;
+	text-align: center;
+}
+.data{
+	border: 2px;
+}
+.td{
+	border-radius: 3px;
+	color: red;
+}

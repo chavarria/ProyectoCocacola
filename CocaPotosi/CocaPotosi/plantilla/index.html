@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="http://maps.googleapis.com/maps/api/js?sensor=TRUE"></script>
+ <script src="{{STATIC_URL}}bootstrap/js/scripts.js"></script>
+
+    <meta charset="utf-8">
+    <title>Coca Cola | Potosi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Starter files for implementing Twitter Bootstrap's Carousel -- using Bootstrap version 2.0.4">
+    <meta name="author" content="David Cochran for webdesign.tutsplus.com">
+
+    <!-- Le styles -->
+    {% block cabesa %}<script src="{{STATIC_URL}}jquery.min.js"></script>{% endblock %}
+    
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-color: #fff;
+        background:url(logo.jpg);
+      }
+    </style>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}bootstrap/css/estilos.css" rel="stylesheet">
+
+ 
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+
+      <div class="navbar-inner">
+      
+        <div class="container">
+        
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <div class="span2"><a class="brand" href="#"><img src="{{STATIC_URL}}a.gif"  width="80%"></a></div><br><div class="span9" style="background-color:#9b0505; ">
+          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="/">HOME</a>
+              </li>
+              
+              <li >
+                <a href="/noticias" >
+                      NOTICIAS
+                </a>
+              </li>
+              
+              <li>
+                <a href="/promocion"> <!--class="dropdown-toggle" data-toggle="dropdown"-->
+                      PROMOCIONES
+                </a>
+              </li>  
+
+              <li>
+                <a href="/productos">PRODUCTOS</a>
+              </li>
+              
+              <li>
+                <a href="/regiscliente">RESERVAS</a>
+              </li>
+              
+              <li >
+                <a href="/acerca" >
+                    ACERCA 
+                </a>
+              </li>
+
+              <li>
+                <a href="/listado">COMENTAR</a>
+              </li><!-- dropdown -->
+            </ul><!-- /.nav -->
+          </div>
+          <!--/.nav-collapse -->
+        </div><div align='right'><img src="{{STATIC_URL}}a.gif"  width="2%">
+      <a href='/logueo'>login</a></div><!-- /.container -->
+      </div>
+      <!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
+  </div>
+
+<div class="span1"></div>
+<BR><BR><BR>
+
+<div class="container1">
+{% block contenedor %}
+{% endblock %}
+</div>
+
+
+</body>
+</html>

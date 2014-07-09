@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Coca Cola | Potosi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Starter files for implementing Twitter Bootstrap's Carousel -- using Bootstrap version 2.0.4">
+    <meta name="author" content="David Cochran for webdesign.tutsplus.com">
+
+    <!-- Le styles -->
+    {% block cabesa %}<script src="{{STATIC_URL}}jquery.min.js"></script>{% endblock %}
+    
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-color: grey;
+      }
+    </style>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+   
+  </head>
+
+  <body>
+    {% block menu %}
+
+    <div class="navbar navbar-fixed-top">
+
+      <div class="navbar-inner">
+      
+        <div class="container">
+        
+        
+
+          <div class="span2"><a class="brand" href="#"><img src="{{STATIC_URL}}a.gif"  width="80%"></a></div><br><div class="span9" style="background-color:#9b0505; ">
+          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="/">HOME</a>
+              </li>
+              
+              <li class="active">
+                <a href="/noticias" >
+                      NOTICIAS
+                </a>
+              </li>
+              
+              <li class="active">
+                <a href="/promocion"> <!--class="dropdown-toggle" data-toggle="dropdown"-->
+                      PROMOCIONES
+                </a>
+              </li>  
+
+              <li class="active">
+                <a href="/productos1">PRODUCTOS</a>
+              </li>
+              
+              <li class="active">
+                <a href="/regiscliente">REGISTRO</a>
+              </li>
+              
+              <li class="active">
+                <a href="/acerca" >
+                    ACERCA 
+                </a>
+              </li>
+
+              <li class="active">
+                <a href="/listado">COMENTAR</a>
+              </li>
+
+
+            </ul>
+                          
+          </div>
+          </div><div align='right'><img src="{{STATIC_URL}}a.gif"  width="2%">
+      <a href='/logueo'>login</a></div><!-- /.container -->
+      </div>   
+        </div>
+
+    </div> 
+  </div>
+  </div>
+
+  <br>
+  <br>
+
+  <br>
+  <br>
+
+ {% endblock %}
+
+<div class="span1"></div>
+
+      <!-- Example row of columns -->
+      {% block cuerpo %}
+      <span style="color: red;">
+      <div class="row">
+        <div class="span4">
+          <center><h2>Promocion 1</h2></center>
+          <p><a href="#"><img src="{{STATIC_URL}}bootstrap/img/1.jpg" /></a></p>
+           <p>Junta tapas para ganar grandes premios junto a COCA COLA. tapas marcadas con GOLES te dan oportunidad de ganar balones, poleras,coolers, vasos y un televisor 3D. </p>
+          <!--<p><a class="btn" href="#">View details &raquo;</a></p>-->
+        </div>
+        <div class="span4">
+          <center><h2>Vive el Mundial</h2></center>
+          <p>
+          <center>
+                   <video  controls="controls"  width="375px" height="250px" preload="preload">
+
+            
+                    <source src="{{STATIC_URL}}bootstrap/img/publi2.ogg" type="video/ogg"/>
+                    <source src="{{STATIC_URL}}bootstrap/img/publi2.mp4" type="video/mp4"/>
+                    <source src="{{STATIC_URL}}bootstrap/img/publi2.webm" type="video/webm"/>
+                   Tu navegador no soporta video. Haz clic 
+                   <a href="">AQUI</a> para descargar un navegador compatible
+                   </center>
+      
+           </p>
+      
+       </div>
+        <div class="span4">
+          <center><h2>Promocion 3</h2></center>
+          <p><a href="#"><img src="{{STATIC_URL}}bootstrap/img/3.jpg" name='3'/></a></p>
+          <p>Te presentamos una oprtunidad para ser participe del mundial. Ahora puedes viajar a Brazil con cuatro amigos a presenciar dos partidos de cuartos de final todo pagado en el jet COCA COLA.</p>
+      
+        </div>
+      </div>
+      </div>
+      {% endblock %}
+     <!-- /container -->
+    
+    
+           <p></p>
+            
+  </body>
+</html>

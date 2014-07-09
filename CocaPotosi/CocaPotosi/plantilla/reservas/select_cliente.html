@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block contenedor %}
+
+<table>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Direccion</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+
+		{% for c in clientes  %}
+			<tr>
+				
+				<td>{{c.nombre}}</td>
+				<td>{{c.direccion}}</td>
+				<td>
+					<a href="{% url 'reserva.views.create_reserva' c.id %}">Seleccionar</a>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

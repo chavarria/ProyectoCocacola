@@ -1,0 +1,136 @@
+{% extends 'index.html' %}
+
+{% block contenedor %}
+
+
+
+
+
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+      $("#")
+
+    })
+
+</script>
+<br><center><h1 id='titulo1'>ELIJA UN PRODUCTO </h1><br>
+<section>
+  
+    {% for dato in formu %}
+
+  <table class="table" style="background-color: rgb(216,213,213);">
+    <theader>
+
+      <tr>
+     
+       <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Contenido</th>
+        <th>Sabor</th>
+        <th>Categoria</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        
+      </tr>
+
+    </theader>
+
+
+    <tbody>
+      
+      <td><img src="{{MEDIA_URL}}{{dato.fotografia}}" width='150px' height="150px"></td>
+      <td >{{dato.nombre}}</td>
+    <td>{{dato.contenido_neto}}</td>
+    <td>{{dato.sabor}}</td>
+      <td>{{dato.id_cat}}</td>
+    <td>{{dato.precio}}</td>
+      
+      <td> <form id='formulario' method='post' >
+  {% csrf_token %}
+    <h5>Nombre</h5>
+        {{form.id_Usuario}}
+        
+        <h5>Cantidad</h5>
+        {{form.cantidad}}
+     
+        <input type="submit" value="Registrar"/>
+        </form>
+    </td>
+
+      
+
+   
+      <!-- <td>{{cantidad_form.cantidad}}</td> -->
+     <!--  <td class='formu'>cantidad:</td><td class=`'formu'>
+      {{formulario.cantidad}}{{item.item.id_pro.nombre}}</td>
+      <td><input type="submit" value="Registrar"/></td> -->
+<!--  <td> <a href="añadir a la cesta" id="cantidad" id_pro="{{item.id}}">comprar</a></td>  -->
+      
+      <td>   
+      <div id="carritocompras">
+    <h2>Carrito de Compras</h2>
+    <ul>
+<!-- <select name='id_prove'>
+        {% for dato in proveedor %}
+        <option value='{{dato.id}}'>{{dato.usuario}} - {{dato.departamento}}</option>
+        {% endfor %} 
+      </select>>
+
+      </td></tr>
+      <tr><td class='formu'>Categoria:</td><td class='formu'>
+      <select name='id_cat'>
+        {% for dato in categoria %}
+        <option value='{{dato.id}}'>{{dato.nombre}}</option>
+        {% endfor %} 
+      </select>> -->
+
+
+  {%for dato in model_producto %}
+    <li>{{dato.nombre}}{{dato.cantidad}}{{dato.precio}}precio total:{{dato.preciototal}}bs</li>
+  {% endfor %}
+  ---------------------
+  TOTAL {{total}} Bs
+  
+{% for dato in formulario %}
+
+    <table>{% csrf_token %}
+  
+      <tr><td width='10%'>Nombre</td><td width='20%'>{{dato.id_Usuario}}</td></tr>
+      <tr><td width="10%">cantidad</td><td width="20%">{{dato.cantidad}}</td></tr>
+      </table>
+{% endfor %}
+
+</ul>
+  </div></td>
+
+  </tbody>
+
+    {% endfor %} 
+  
+
+    <a href="/reservas" class="btn btn-primary">Regresar a la Categoria</a>
+  </center><br><br><br>
+  </table><br><br>
+<!--   <form id='formulario' method='post' enctype='multipart/form-data' action=''>
+  {% csrf_token %}
+
+     
+        <h4>Nombre</h4>
+        {{form.id_Usuario}}
+        
+        <h4>Cantidad</h4>
+        {{form.cantidad}}<br>
+     
+        <input type="submit" value="Registrar"/>
+
+    </td>
+  </tr>
+  </form> -->
+  </section>
+  <tr>
+
+</tr>
+
+{% endblock %}

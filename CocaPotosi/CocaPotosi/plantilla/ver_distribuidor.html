@@ -1,0 +1,21 @@
+{% extends "index1.html" %}
+{% block contenedor %}
+	<br><center><h1 id='camp'>VER USUARIOS </h1><br>
+	
+		{% for dato in formulario %}
+		<table border='5' width='50%' style="background:red;">{% csrf_token %}
+			<tr><td align='center' colspan="3">			
+			</td></tr>
+			<tr><td align='center' rowspan="7">
+			<img src="{{MEDIA_URL}}{{dato.fotografia}}" width='70%'>
+			</td></tr>
+			<tr><td width='10%'>C.I.</td><td width='20%'>{{dato.ci}}</td></tr>
+			<tr><td id='camp'>Nombres</td><td>{{dato.nombre}}</td></tr>
+			<tr><td>Apellidos</td><td>{{dato.apellidos}}</td></tr>
+			<tr><td>Cargo</td><td>{{dato.cargo}}</td></tr>
+			<tr><td>Clave</td><td>{{dato.clave}}</td></tr>
+			<tr><td>Fecha</td><td>{{dato.fecha}}</td></tr>
+			</table><br><br>
+		{% endfor %} 
+	</center><br><br><br>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "estructura.html" %}
+
+{% block contenido %}
+	<article>
+		<a href= "{% url 'CocaPotosi.apps.principal.views.entrada' entrada.pk %}"><h3>{{entrada.titulo}}</h3></a>
+		<time>{{entrada.fecha}}</time>
+		<p>{{entrada.contenido}}</p>
+	</article>
+	{% if comentario %}
+	<p>comentarios:</p>
+
+	{% endif %}
+		
+	
+	<ul>
+	{% for comentario in comentario %}
+		<li>{{ comentario.fecha}} - {{ comentario.autor}}</li>
+		<ul>
+			<li>{{comentario.mensaje|linebreaks}}</li>
+		</ul>
+	{% endfor %}
+	</ul>
+	<form action="{% url 'CocaPotosi.apps.principal.views.poncomentario' entrada.id %}"method ="POST">
+	{% csrf_token %}
+		<p>Nombre:{{ form.autor }}</p>
+		<p>Mensaje:{{ form.mensaje|linebreaks }}</p>
+		<p><input type="submit" value= "enviar"></p>
+	</form>
+	{% endblock %}

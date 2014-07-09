@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Coca Cola | Potosi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Starter files for implementing Twitter Bootstrap's Carousel -- using Bootstrap version 2.0.4">
+    <meta name="author" content="David Cochran for webdesign.tutsplus.com">
+
+    <!-- Le styles -->
+    {% block cabesa %}<script src="{{STATIC_URL}}jquery.min.js"></script>{% endblock %}
+    
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-color: #fff;
+
+        background:url(static/img/bootstrap.css/1031.jpg); 
+        background-size: 80px 40px;
+
+        }
+        
+        
+
+        h1 {
+          color: red;
+          font-size: 30px;
+        }
+    </style>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <div class="span2"><a class="brand" href="#"><img src="{{STATIC_URL}}logo.jpg"  width="80%"></a></div><br><div class="span9" style="background-color:#E7E1E1; ">
+          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+              <a href="/listado">COMENTARIOS</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/regis_entrada">Registrar entrada</a></li>
+                  
+                </ul>
+                </li>
+              <li class="active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    REPORTES
+                <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                <li><a href="/productos/pdf/">Reportes Productos</a></li>
+                  <li><a href="/reserva/pdf/">Reporte reservas</a></li>
+                  <li><a href="/almacen/pdf/">Reporte Almacen</a></li>
+                  <li><a href="/detalle/pdf/">Reportes</a></li>
+                </ul>
+              </li>
+              <li class="active">
+                <a href="/mapa" class="dropdown-toggle" data-toggle="dropdown">
+                    MAPA
+                <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                 
+                  <li><a href="/mapa">Ver</a></li>
+                </ul>
+              </li>  
+              <li class="active">
+                <a href="/reserva/productos/select" class="dropdown-toggle" data-toggle="dropdown">
+                    Facturacion
+                <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                 
+                  <li><a href="/reserva/clientes/select">Ver</a></li>
+                </ul>
+              </li>  
+
+              <li class="active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    PRODUCTOS
+                <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/regis_cate">Registro Categoria</a></li>
+                  <li><a href="/regis_produc">Registro Producto</a></li>
+                  <li><a href="/ver_producto">Ver producto</a></li>
+                  <li><a href="/ver_cate">Ver Categorias</a></li>
+                </ul>
+              </li>
+              <li class="active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    REGISTRO
+                <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/regis_distri">Distribuidor</a></li>
+                  <li><a href="/ver_distri">Ver distribuidor</a></li>
+                  <li><a href="/registro_proveedor">registro proveedor</a></li>
+                  <li><a href="/regis_entrada">registro articulo</a></li>
+                </ul>
+              </li>
+              <li class="active"><a href="/cerrar">SALIR</a></li><!-- dropdown -->
+            </ul><!-- /.nav -->
+          </div><!--/.nav-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
+</div><div class="span1"></div>
+      
+    <script>window.jQuery || document.write('{{STATIC_URL}}bootstrap/js/jquery-1.7.2.min.js"><\/script>')</script>
+    
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    <script src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 4000
+        });
+      });
+    </script><br><br><br>
+     {% block contenedor %}
+{% endblock %}
+             
+<CENTER><h1>BIENVENIDO AL SITIO ADMINISTRATIVO</h1></CENTER>
+<a href="#"><CENTER><img src="{{STATIC_URL}}bootstrap/img/1031.jpg" width="42%" height="40%"  style="background:url(1031.jpg);" /></CENTER></a>
+</td>
+
+
+  </body>
+</html>

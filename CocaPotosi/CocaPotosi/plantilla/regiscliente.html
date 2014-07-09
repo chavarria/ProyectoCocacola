@@ -1,0 +1,42 @@
+{% extends 'index3.html'%}
+{% block cuerpo %}
+
+
+<span style="color: red;">
+	<div class"row">
+		<div class="span3"></div>
+		<div class="span6">
+		<br><br>
+			<center><h3> Registro de Cliente</h3></center><br>
+			<form acion="" method="post" enctype='multipart/form-data' class="form-horizontal" style="color: white;">
+				{% csrf_token %}
+				{% for dato in formu %}
+					{{dato.errors}}
+					<div class"control-group">
+						{{dato.label_tag}}
+						<div class="controls">
+							{{dato}}
+						</div>
+					</div><br>
+				{% endfor %}
+			
+<center>
+
+</center> 
+				<br><br>
+
+				<table align='center' >
+					<tr>
+						<td align='right' width=150px><button class='btn' type="submit",value="Guardar">Guardar</button></td>
+						<td align='center' width=150px></td>
+						<td align='left' width=150px><a class='btn' href='/'>Cancelar</a></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="span3"></div>
+	</div>
+	<script type="text/javascript">
+		$('label').addClass('control-label')
+	</script>
+{% endblock  %}

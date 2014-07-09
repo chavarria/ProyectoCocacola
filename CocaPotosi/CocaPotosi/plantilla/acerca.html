@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Coca Cola | Potosi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Starter files for implementing Twitter Bootstrap's Carousel -- using Bootstrap version 2.0.4">
+    <meta name="author" content="David Cochran for webdesign.tutsplus.com">
+
+    <!-- Le styles -->
+    {% block cabesa %}<script src="{{STATIC_URL}}jquery.min.js"></script>{% endblock %}
+    
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-color:#9b0505;
+      }
+    </style>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <!-- Commented out - update these with your own files -->
+    <!-- 
+      <link rel="shortcut icon" href="ico/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"> 
+    -->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <div class="span2"><a class="brand" href="#"><img src="{{STATIC_URL}}a.gif"  width="80%"></a></div><br><div class="span9" style="background-color:#9b0505; ">
+          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="/">HOME</a>
+              </li>
+              
+              <li >
+                <a href="/noticias" >
+                      NOTICIAS
+                </a>
+              </li>
+              
+              <li>
+                <a href="/promocion"> <!--class="dropdown-toggle" data-toggle="dropdown"-->
+                      PROMOCIONES
+                </a>
+              </li>  
+
+              <li>
+                <a href="/productos">PRODUCTOS</a>
+              </li>
+              
+              <li>
+                <a href="/regiscliente">RESERVAS</a>
+              </li>
+              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    ACERCA 
+                </a>
+              </li>
+
+              <li>
+                <a href="/listado">COMENTAR</a>
+              </li><!-- dropdown -->
+            </ul><!-- /.nav -->
+          </div><!--/.nav-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
+</div><div class="span1"></div>
+
+      <!-- Example row of columns -->
+      {% block cuerpo %}
+      <span style="color: white;">
+
+        <div class="span4">
+          <center><h2></h2></center>
+          <p><a href="#"><img src="{{STATIC_URL}}bootstrap/img/co.jpg" width="300px" height="300px" name='3'align="right"/></a></p>
+          <p> </p>
+          <!--<p><a class="btn" href="#">View details &raquo;</a></p>-->
+        </div>  <div class="span4">
+          <center><h2></h2></center>
+          <p><a href="#"><img src="{{STATIC_URL}}bootstrap/img/b.gif" width="10px" height="10px" name='3'align="right"/></a></p>
+          <p>Coca-Cola es un refresco  efervescente vendido en tiendas , restaurantes  y máquinas expendedoras  en más de 200países . Es producido por The Coca-Cola Company . En un principio, cuando la inventó el farmacéutico  John Pemberton , fue una medicina  patentada , aunque fue adquirida posteriormente por el empresario Asa Griggs Candler , cuyas tácticas de márketing  hicieron a la bebida una de las más consumidas del siglo XX . La compañía produce realmente un concentrado de Coca-Cola, que luego vende a varias empresas embotelladoras licenciadas, las cuales mezclan el concentrado con agua  filtrada y edulcorantes  para, posteriormente, vender y distribuir la bebida en latas  y botellas  en los comercios minoristas o mayoristas. También existen variantes de la Coca-Cola, fabricados por la misma empresa, como la Coca-Cola Light y la Coca-Cola Diet; otras son la Coca-Cola sin cafeína, Coca-Cola Zero , entre otras lanzadas como fanta,sprite,simba,mineragua,agua vital,aquarius,powerade,burn.
+
+</p>
+          <!--<p><a class="btn" href="#">View details &raquo;</a></p>-->
+        </div>
+        </div>  <div class="span4">
+          <center><h2>coca-cola Potosi</h2></center>
+          <p><a href="#"><img src="{{STATIC_URL}}bootstrap/img/c.jpeg" width="300px" height="300px" name='3'align="right"/></a></p><p>
+<h2>Contáctenos:</h2>
+        En POTOSI las oficinas se encuentran en la calle final de 14 de infanteria esquina circunvalacion o llamando a los telefonos 262 27222 o 262 43663 atencion en horarios de oficina </p>
+          </div>
+      </div>
+      {% endblock %}
+      {% block foot %}
+      {% endblock %}
+
+
+      <!--<hr>
+
+      <footer>
+        <p>By <a href="http://twitter.com/davidcochran">David Cochran</a> of <a href="http://alittlecode.com/">aLittleCode.com</a> for <a href="http://webdesign.tutsplus.com/">webdesign.tutsplus.com</a></p>
+      </footer>-->
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    
+    <script>window.jQuery || document.write('{{STATIC_URL}}bootstrap/js/jquery-1.7.2.min.js"><\/script>')</script>
+    
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    <script src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 4000
+        });
+      });
+    </script>
+     
+        
+  </body>
+</html>

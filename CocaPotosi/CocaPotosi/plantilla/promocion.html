@@ -1,0 +1,194 @@
+<!Doctype html>
+<html>
+<head>
+
+    {% block cabesa %}<script src="{{STATIC_URL}}jquery.min.js"></script>{% endblock %}
+    
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      #principal_x {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background: #000000;
+        height: auto;
+      }
+    </style>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}bootstrap/css/style.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}bootstrap/css/default.css" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+{% block menu %}
+    <div class="navbar navbar-fixed-top">
+
+      <div class="navbar-inner">
+      
+        <div class="container">
+        
+        
+
+          <div class="span2"><a class="brand" href="#"><img src="{{STATIC_URL}}a.gif"  width="80%"></a></div><br><div class="span9" style="background-color:red; ">
+          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="/">HOME</a>
+              </li>
+              
+              <li class="active">
+                <a href="/noticias" >
+                      NOTICIAS
+                </a>
+              </li>
+              
+              <li class="active">
+                <a href="/promocion"> <!--class="dropdown-toggle" data-toggle="dropdown"-->
+                      PROMOCIONES
+                </a>
+              </li>  
+
+              <li class="active">
+                <a href="/productos">PRODUCTOS</a>
+              </li>
+              
+              <li class="active">
+                <a href="/reservas">REGISTRO</a>
+              </li>
+              
+              <li class="active">
+                <a href="/acerca" >
+                    ACERCA 
+                </a>
+              </li>
+
+              <li class="active">
+                <a href="/listado">COMENTAR</a>
+              </li>
+
+
+            </ul>
+                          
+          </div>
+          </div><div align='right'><img src="{{STATIC_URL}}a.gif"  width="2%">
+      <a href='/logueo'>login</a></div><!-- /.container -->
+      </div>   
+        </div>
+
+    </div> 
+  </div>
+  </div>
+
+  <br>
+  <br>
+
+  <br>
+  <br>
+
+ {% endblock %}
+
+      <!-- Example row of columns -->
+      {% block cuerpo %}
+      <div id="page">
+    <div id="sidebar1" class="sidebar">
+      <ul>
+        <li>
+          <h2>PROMOCIONES</h2>
+          <ul>
+            <li><a href="/promocion"><img src="{{STATIC_URL}}bootstrap/img/1.gif" name='3'/></a></li>
+            <li><a href="/promocion">BALON</a></li>
+            <li><a href="/promocion">BOWLS</a></li>
+            <li><a href="/promocion">CUBETAS DE HIELO</a></li>
+            <li><a href="/promocion">COOLERS</a></li>
+            <li><a href="/promocion">COPAS</a></li>
+            <li><a href="/promocion">TOMA TODO POWER</a></li>
+            <li><a href="/promocion">MOCHILA POWER</a></li>
+            
+          </ul>
+        </li>
+        <li>
+          <h2>COMENTARIOS RECIENTES</h2>
+          <ul>
+            <li><a href="/listado">porque se terminaron los balones</a> on <a href="/listado">los cooler cuando llegan</a></li>
+            <li><a href="/listado">muy buena la promo</a>  <a href="/listado">hasta cuando es la promocion?</a></li>
+           
+            
+          </ul>
+        </li>
+        
+        
+      </ul>
+    </div>
+        
+      <span style="color:black;">
+      <div class="row">      
+        <div class="span4">
+        
+
+        
+          <li><a href="/promocion" ><img src="{{STATIC_URL}}bootstrap/img/pro1.png" width="700px" height="200px" ></a><li>
+            <p>Coca-Cola presenta sus promociones para viajar al Mundial de Brasil
+en 25 abril 2014 en Marcas, Marketing, Mundial Brasil 2014, Publicidad, Si te marca, Spots 2 Comentarios 
+Coca-Cola presenta dos promociones que permitirán ganar viajes a Brasil en avión y en motorhome para ver partidos de la Selección Argentina. Además, hay espectaculares premios para disfrutar de la Copa Mundial de la FIFA 2014.
+ 
+Entre abril y mayo, las tapitas doradas de Coca-Cola y Coca-Cola Zero permitirán ganar increíbles premios, entre los que se destacan paquetes en avión y en motorhome para viajar a Brasil junto a cuatro amigos y ver uno de los partidos de la Selección Argentina. Además, se podrán ganar millones de botellas de Coca-Cola y Coca-Cola Zero gratis.
+Asimismo, desde el 5 de mayo hasta el 15 de junio, cargando el ticket de compra de cualquier producto de la línea Coca-Cola, Coca-Cola Zero o Powerade en el sitio web de la promoción www.lacopadetodos.com.ar, se podrán ganar 7 viajes al Mundial, 30 “livings” -que incluyen una TV 55”, 4 puffs y una heladera de Coca-Cola- y 500 camisetas oficiales de la Selección Argentina. El alcance de la promoción es nacional y participan todos los puntos de venta de las siguientes cadenas: Carrefour, Libertad, La Anónima, Coto, Walmart, Jumbo, Disco y Vea.
+http://youtu.be/nrbgzTX_C6c
+Estas promociones forman parte de la campaña “La Copa de Todos”, la campaña de marketing y comunicación más importante de la historia de Coca-Cola, creada especialmente para el Mundial de Fútbol de Brasil 2014.
+
+
+
+</p>
+          <!--<p><a class="btn" href="#">View details &raquo;</a></p>-->
+        </div>
+
+       </div>
+        <div class="span4">
+          <center><h2></h2>
+          <p><a href="/promociones"><img src="{{STATIC_URL}}bootstrap/img/avion.jpg" name='3'/></a></p>
+          
+</center>
+          <!--<p><a class="btn" href="#">View details &raquo;</a></p>-->
+        </div>
+      </div>
+      {% endblock %}
+      {% block foot %}
+      {% endblock %}
+
+      <!--<hr>
+
+      <footer>
+        <p>By <a href="http://twitter.com/davidcochran">David Cochran</a> of <a href="http://alittlecode.com/">aLittleCode.com</a> for <a href="http://webdesign.tutsplus.com/">webdesign.tutsplus.com</a></p>
+      </footer>-->
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    
+    <script>window.jQuery || document.write('{{STATIC_URL}}bootstrap/js/jquery-1.7.2.min.js"><\/script>')</script>
+    
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    <script src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 4000
+        });
+      });
+    </script>
+    </div class="row">
+    <div>
+      <audio conntrols="controls" autoplay="autoplay">
+              <source src="{{STATIC_URL}}bootstrap/img/coca.ogg" type="audio/ogg"/>
+              <source src="{{STATIC_URL}}bootstrap/img/coca.mp3" type="audio/mp4"/>
+              <source src="{{STATIC_URL}}bootstrap/img/coca.wev" type="audio/webm"/>
+              Tu navegador no soporta video. Haz clic 
+              <a href="">AQUI</a> para descargar un navegador compatible
+      </audio>
+    </div>
+      
+        
+  </body>
+</html>

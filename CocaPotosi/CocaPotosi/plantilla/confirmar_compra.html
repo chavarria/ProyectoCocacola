@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+{% block producto %}
+    <div class="caja">
+        <div class="contenedor" id="producto">
+        <h4>Productos en Carrito</h4>
+        {% if carr.count > 0 %}
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Imagen</th>
+                    <th>Cantidad</th>
+                    <th>Opciones</th>
+                </tr>
+                {% for i in carr %}
+                    <tr>
+                        <td>
+                            {{ i.producto.nombre }}
+                        </td>
+                        <td>
+                            <img src="/media/{{ i.producto.imagen }}">
+                        </td>
+                        <td>
+                            {{ i.cantidad }}
+                        </td>
+                        <td>
+                            <a href="/carrito/eliminar/{{ i.id }}/">Eliminar de Carrito</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <a href="/comprar/final/">Realizar Transacción</a>
+        {% else %}
+            No existen productos en el carrito
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

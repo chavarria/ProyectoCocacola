@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% block cuerpo %}
+	<div class='row'>
+		<div class='span1'></div>
+		<div class='span10'>
+			<span style="color: white;">
+				
+					<table border=0 width= 150% height=50px >
+						<tr>
+							<td width= 300px height=50px><h3>nombre</h2></td>
+							<td width= 300px height=50px><h3>apellidos</h2></td>
+							<td width= 300px height=50px><h3>ci</h2></td>
+
+						</tr>
+						{% for dato in client %}
+						{{dato.errors}}
+						<tr>
+							<td width= 300px height=50px >
+							 <font aling='center' size= 3><a style="color: white;" href="/detalle/{{dato.id}}">{{dato.nombre}}</a></font>
+							</td>
+
+							<td width= 300px height=50px>
+							<font aling='center' size= 3>{{dato.apellidos}}</font>
+							
+							</td>
+							<td width= 300px height=50px> 
+							<font aling='center' size= 3>{{dato.ci}}</font>
+							
+							</td>
+							<td width= 300px height=50px>
+							<font aling='center' size= 3><a href="modificar/{{dato.id}}" class='btn'>modificar</a><br></font>
+							
+							</td>
+							<td width= 300px height=50px>
+							<font aling='center' size= 3><a href="eliminar/{{dato.id}}" class='btn'>eliminar</a><br></font>
+							
+							</td>
+
+						</tr>
+						{% endfor %} 
+
+					</table>
+			</span>
+		</div>
+		<div class='span1'></div>
+		
+	</div>
+	      <video controls height="300" width="400" src="publi1.mp4">
+    </video>
+
+{% endblock %}

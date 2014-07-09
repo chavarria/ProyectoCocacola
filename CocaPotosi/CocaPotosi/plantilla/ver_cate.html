@@ -1,0 +1,23 @@
+{% extends "index1.html" %}
+
+			
+
+{% block contenedor %}
+
+	<br><center><h1 id='titulo1'> VER CATEGORIA </h1><br>
+
+		{% for dato in formulario %}
+		<table border='5' width='50%' style="background-color: rgb(216,213,213);">{% csrf_token %}
+			<tr><td align='center' colspan="3">			
+			
+			</td></tr>
+			<tr><td width='10%'>Nombre</td><td width='20%'>{{dato.nombre}}</td></tr>
+			<tr><td id='camp'>Descripcion</td><td>{{dato.descripcion}}</td></tr>
+			
+			
+			
+			
+			</table><br><br>
+		{% endfor %} 
+	</center><br><br><br>
+{% endblock %}

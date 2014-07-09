@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block contenedor %}
+<center><br><br>
+  <h1 id='titulo1'>SISTEMA DE AUTENTIFICACION</h1><br><CENTER><p><a href="#"><img src="{{STATIC_URL}}bootstrap/img/1031.jpg" width="18%" height="15%" /></a></p></CENTER>
+  <form id='formulario' method='post' action="">{% csrf_token %}
+    <table id='table' border='0' width='40%' rules='none' style="background:red;">
+      <tr><td colspan='2' align='center' id='camp'>INGRESE SUS DATOS</td> </tr>
+      <tr><td colspan='2' ></td> </tr>
+      <tr><td colspan='2' ></td> </tr>
+      <tr><td id='camp'>Usuario:</td><td class='formu'>{{formulario.cargo}}</td></tr>
+      <tr><td id='camp'>Contraseña:</td><td class='formu'>
+        <input type='password' name='clave'></td></tr>      
+      <tr><td colspan='2' align="center">
+        <input type='submit' value='Enviar' id='boton'/></td> </tr>     
+      <tr><td colspan='2' id='borde2'></td> </tr>     
+    </table>  
+    
+  </form> 
+  </center>
+
+
+{% endblock %}

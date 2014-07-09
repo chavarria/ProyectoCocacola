@@ -1,0 +1,177 @@
+<!Doctype html>
+<html>
+<head>
+
+    {% block cabesa %}<script src="{{STATIC_URL}}jquery.min.js"></script>{% endblock %}
+    
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      #principal_x {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background: #000000;
+        height: auto;
+      }
+    </style>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}bootstrap/css/style.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}bootstrap/css/default.css" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+{% block menu %}
+    <div class="navbar navbar-fixed-top">
+
+      <div class="navbar-inner">
+      
+        <div class="container">
+        
+        
+
+          <div class="span2"><a class="brand" href="#"><img src="{{STATIC_URL}}a.gif"  width="80%"></a></div><br><div class="span9" style="background-color:#9b0505; ">
+          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="/">HOME</a>
+              </li>
+              
+              <li class="active">
+                <a href="/noticias" >
+                      NOTICIAS
+                </a>
+              </li>
+              
+              <li class="active">
+                <a href="/promocion"> <!--class="dropdown-toggle" data-toggle="dropdown"-->
+                      PROMOCIONES
+                </a>
+              </li>  
+
+              <li class="active">
+                <a href="/productos">PRODUCTOS</a>
+              </li>
+              
+              <li class="active">
+                <a href="/reservas">RESERVAS</a>
+              </li>
+              
+              <li class="active">
+                <a href="/acerca" >
+                    ACERCA 
+                </a>
+              </li>
+
+              <li class="active">
+                <a href="/listado">COMENTAR</a>
+              </li>
+
+
+            </ul>
+                          
+          </div>
+          </div><div align='right'><img src="{{STATIC_URL}}a.gif"  width="2%">
+      <a href='/logueo'>login</a></div><!-- /.container -->
+      </div>   
+        </div>
+
+    </div> 
+  </div>
+  </div>
+
+  <br>
+  <br>
+
+  <br>
+  <br>
+
+ {% endblock %}
+
+      {% block cuerpo %}
+      <div id="page">
+    <div id="sidebar1" class="sidebar">
+      <ul>
+        <li>
+          <h2>NOTICIAS</h2>
+          <ul>
+            <li><a href="/noticias">Coca-Cola estrena himno para Copa Mundial de la FIFA Brasil 2014</a><p>'La copa de todos', así se llamará la melodía que acompañará el certamen futbolístico.</p></li>
+            <li><a href="/noticias">¿Coca Cola busca otra 'fórmula' para la historia?</a><p>El presidente mundial de la firma, Muhtar Kent, dice que el secreto está en la clase media.</p></li>
+            <li><a href="/noticias">Coca-Cola envasará ahora con material reciclable</a><p>La estrategia busca reducir la producción de botellas contaminantes. </p></li>
+            <li><a href="/noticias">Polémica racista por el anuncio de Coca-Cola durante la Super Bowl</a><p>En la publicidad se canta 'America The Beautiful', considerada un himno, en ocho idiomas distintos </p></li>
+            <li><a href="/noticias">La Asamblea para la Salud escucha a consumidores</a><p>Organizaciones civiles presentan una convención para promover dietas saludables con una normativa similar a la del tabaco</p></li>
+           
+            
+          </ul>
+        </li>
+        <li>
+          <h2>COMENTARIOS RECIENTES</h2>
+          <ul>
+            <li><a href="/listado">NUEVA SUCURSAL MUY PRONTO</a> on <a href="/listado">COCA COLA zero</a></li>
+            <li><a href="/listado">no cierren la coca cola</a> on <a href="/listado">muy bueno el tema del mundial</a></li>
+            <li><a href="/listado">muy buena la pagina</a> on <a href="/listado">si :)</a></li>
+            
+          </ul>
+        </li>
+        
+        <li>
+          <h2>Archivos</h2>
+          <ul>
+            <li><a href="#">Enero</a> (23)</li>
+            <li><a href="#">Febrero</a> (31)</li>
+            <li><a href="#">Marzo</a> (31)</li>
+            <li><a href="#">Abril</a> (30)</li>
+            <li><a href="#">Mayo</a> (31)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+      <span style="color: red;">
+      <div class="row">
+            <h1></h1>
+            <center><h1> COCA COLA TE INFORMA</h1></center>
+            <span style="color: white;"
+        <div class="span4">
+          
+          <p><a href="#"><img src="{{STATIC_URL}}bootstrap/img/noti.gif"  width="300px" height="200px"/></a></p>
+           
+          <!--<p><a class="btn" href="#">View details &raquo;</a></p>-->
+        </div>
+        
+
+       
+        
+      </div>
+      <span style="color: white;">
+      <div class="row">
+            
+       
+
+        
+        
+      </div>
+      {% endblock %}
+      {% block foot %}
+      {% endblock %}
+
+      
+
+    </div> <!-- /container -->
+
+    
+    
+    <script>window.jQuery || document.write('{{STATIC_URL}}bootstrap/js/jquery-1.7.2.min.js"><\/script>')</script>
+    
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    <script src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 4000
+        });
+      });
+    </script>
+    </div class="row">
+     
+  </body>
+</html>

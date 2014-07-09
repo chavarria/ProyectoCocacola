@@ -1,0 +1,38 @@
+{% extends "index1.html" %}
+{% block contenedor %}
+
+<center><br>
+	<h1 id='titulo1'>REGISTRO PROVEEDOR</h1><br>
+	<form id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %}
+		<table border='0' width='40%' rules='none'>
+			<tr><td colspan='2' id='tab1' align='center'>PROVEEDOR</td> </tr>
+			<tr><td colspan='2' id='tab'></td></tr>
+			<tr><td colspan='2' id='borde1'></td></tr>			
+			<tr><td class='formu'>Usuario:</td><td class='formu'>
+			{{formulario.usuario}}</td></tr>
+			<tr><td class='formu'>Nit:</td><td class='formu'>
+			{{formulario.nit}}</td></tr>
+			<tr><td class='formu'>Telefono:</td><td class='formu'>
+			{{formulario.telefono}}</td></tr>
+			<!--tr><td class='formu'>Departamento:</td><td class='formu'>
+			{{formulario.departamento}}</td></tr-->
+			<tr><td class='formu'>Departamento:</td><td class='formu'>
+			<select name='departamento'>
+			<option value='potosi'>potosi</option>
+			<option value='la paz'>la paz</option>
+			<option value='oruro'>oruro</option>
+			<option value='cochabamba'>cochabamba</option>
+			<option value='santa cruz'>santa cruz</option>
+			<option value='tarija'>tarija</option>
+			<option value='beni'>beni</option>
+			<option value='pando'>pando</option>
+			<option value='chuquisaca'>chuquisaca</option>			
+			</select>
+			</td></tr>			
+			<tr><td colspan='2' class='formu'>
+				<input type='submit' value='Registrar' id='boton'/></td> </tr>			
+			<tr><td colspan='2' id='borde2'></td> </tr>			
+		</table>
+	</form>
+	</center><br><br>
+{% endblock %} 

@@ -1,0 +1,62 @@
+{% extends "index1.html" %}
+{% block contenedor %}
+
+<center><br>
+	<h1 id='titulo1'>REGISTRO PRODUCTO</h1><br>
+	<form id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %}
+		<table border='0' width='40%' rules='none'>
+			<tr><td colspan='2' id='tab1' align='center'>PRODUCTO</td> </tr>
+			<tr><td colspan='2' id='tab'></td></tr>
+			<tr><td colspan='2' id='borde1'></td></tr>
+			<tr><td class='formu'>Proveedor:</td><td class='formu'>
+			<select name='id_prove'>
+				{% for dato in proveedor %}
+				<option value='{{dato.id}}'>{{dato.usuario}} - {{dato.departamento}}</option>
+				{% endfor %} 
+			</select>>
+
+			</td></tr>
+			<tr><td class='formu'>Categoria:</td><td class='formu'>
+			<select name='id_cat'>
+				{% for dato in categoria %}
+				<option value='{{dato.id}}'>{{dato.nombre}}</option>
+				{% endfor %} 
+			</select>>
+
+			</td></tr>
+			
+			<tr><td class='formu'>Nombres:</td><td class='formu'>
+			{{formulario.nombre}}</td></tr>
+			<tr><td class='formu'>Contenido Neto:</td><td class='formu'>
+			{{formulario.contenido_neto}}</td></tr>
+			<tr><td class='formu'>sabor:</td><td class='formu'>
+			{{formulario.sabor}}</td></tr>			
+			<tr><td class='formu'>Fotografia:</td><td class='formu'>
+			{{formulario.fotografia}}</td></tr>			
+			<tr><td class='formu'>Precio:</td><td class='formu'><!--borrar-->
+			{{formulario.precio}}</td></tr>		<!--borrar-->
+			<tr><td class='formu'>Cantidad:</td><td class='formu'>
+			<input type='text' name='cant_entrada'></td></tr>			
+			<input type='hidden' name='cant_sal' value='0'>									
+			<input type='hidden' name='fecha' id='ver' value=''>									
+			<script type="text/javascript">
+					//function mifuncion(){
+						//alert("holamundo");
+						var hoy = new Date();
+						var dia = hoy.getDate(); 
+						var mes = hoy.getMonth()+1;
+						var anio= hoy.getFullYear();
+						var fecha_actual = String(anio+"-"+mes+"-"+dia); 
+						//alert(fecha_actual);
+						document.getElementById("ver").value=fecha_actual;	
+					//}
+					//document.getElementById("ver").value="hola";	
+			</script>			
+			<input type='hidden' name='stock' value='true'>									
+			<tr><td colspan='2' class='formu'>
+				<input type='submit' value='Registrar' id='boton'/></td> </tr>			
+			<tr><td colspan='2' id='borde2'></td> </tr>			
+		</table>
+	</form>
+	</center><br><br>
+{% endblock %} 

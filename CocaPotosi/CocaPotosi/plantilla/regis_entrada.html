@@ -1,0 +1,20 @@
+{% extends "index1.html" %}
+{% block contenedor %}
+<center><br>
+	<h1 id='titulo1'>REGISTRO ARTICULO</h1><br>
+	<form id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %}
+		<table border='0' width='40%' rules='none'>
+			<tr><td colspan='2' id='tab1' align='center'>ENTRADA</td> </tr>
+			<tr><td colspan='2' id='tab'></td></tr>
+			<tr><td colspan='2' id='borde1'></td></tr>			
+			<tr><td class='formu'>Nombres:</td><td class='formu'>{{formulario.titulo}}</td></tr>
+			<tr><td class='formu'>Descripcion:</td><td class='formu'>{{formulario.contenido}}</td></tr>
+			<tr><time>{{entrada.fecha}}</time></td></tr>
+			<!-- <input type='hidden' name='fecha' id='ver' value=''> -->							
+			<tr><td colspan='2' class='formu'>
+				<input type='submit' value='Registrar' id='boton'/></td> </tr>			
+			<tr><td colspan='2' id='borde2'></td> </tr>			
+		</table>
+	</form>
+	</center><br><br>
+{% endblock %} 

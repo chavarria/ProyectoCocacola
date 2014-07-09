@@ -1,0 +1,61 @@
+<script type="text/javascript">
+
+	jQuery(document).ready(function($) {
+
+		$("#formulario_carrito").submit(function(event) {
+
+			var data=$(this).serializeObject()
+
+			console.log(data)
+
+			$.ajax({
+
+				url: '/mostrar',
+
+				type: 'POST',
+
+				data: data,
+
+			})
+
+			.done(function(html) {
+
+				itemAgregar.html("");
+
+				$("#carritocompras div").html(html)
+
+			})
+
+			.fail(function() {
+
+				console.log("error");
+
+			})
+
+			.always(function() {
+
+				console.log("complete");
+
+			});
+
+			return false;
+
+		});
+
+		
+
+		
+
+	});
+
+</script>
+
+<form action="" method="post" id="formulario_carrito">
+
+	{%csrf_token%}
+
+	{{form.as_ul}}
+
+	<input type="submit" value="Llevar al carrito de compras"/>
+
+</form>

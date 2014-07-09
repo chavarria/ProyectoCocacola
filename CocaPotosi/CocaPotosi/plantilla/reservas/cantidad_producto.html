@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block contenedor %}
+<style type="text/css">
+	p.informacion{
+		font-size: 16px;
+		font-family: Arial;
+	}
+	td{
+		width: 100px;
+		font-family: Arial;
+		font-size: 14px;
+	}
+	tr:hover{
+		background: yellow;
+	}
+</style>
+<div style="border:solid 1px black;padding:15px;">
+	<p class="informacion"><strong>Reserva #: </strong> {{reserva.id}}</p>
+	<p class="informacion"><strong>Cedula Cliente: </strong> {{reserva.cliente.ci}}</p>
+	<p class="informacion"><strong>Cliente: </strong>{{reserva.cliente.nombre}} {{reserva.cliente.apellidos}}</p>
+</div>
+<div style="border:solid 1px black;padding:15px;">
+	<p class="informacion"><strong>Nombre Producto: </strong> {{producto.nombre}}</p>
+	<p class="informacion"><strong>Stock: </strong>{{almacen.stock}}</p>
+</div>
+<form action="" method="post">{% csrf_token %}
+	{{formulario.as_p}}
+	<button type="submit">Enviar</button>
+</form>
+<script type="text/javascript">
+  $('#id_cantidad').keyup(function(event){
+    var cantidad = $('#id_cantidad').val();
+    var stock = {{almacen.stock}};
+    if(cantidad>stock){
+    	alert('Stock Insuficiente');
+    }
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,14 @@
+
+{% block title %}Crear productos{% endblock %}
+
+{% block contenedor%}
+			<form action="." method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form.as_p }}
+				<input type="submit" value="Grabar" class="btn btn-primary">
+				<input type="reset" value= "Limpiar" class="btn btn-primary">
+			</form>
+		<br>
+			
+
+{% endblock %}
