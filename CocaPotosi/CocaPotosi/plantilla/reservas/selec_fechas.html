@@ -1,0 +1,47 @@
+{% extends 'index1.html' %}
+
+{% block cabesa %}
+
+<!-- scrip de calendario-->
+    <script src="{{ STATIC_URL }}dajax/jquery.dajax.core.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}calendario/calendar.css"/>
+    <script src="{{ STATIC_URL }}calendario/hola.js"></script>
+    <script src="{{ STATIC_URL }}calendario/jquery_ui.js"></script>
+    <script src="{{ STATIC_URL }}calendario/jquery.ui.datepicker-es.js"></script>
+    <script type="text/javascript">
+        $('#id_fecha_ini').addClass('hasDatepicker')
+        $('#id_fecha_fin').addClass('hasDatepicker')
+        $(function() {
+            $('#id_fecha_ini').datepicker({dateFormat: 'dd/mm/yy', changeMonth: true, changeYear: true, yearRange: '-5:+0'});
+            $('#id_fecha_fin').datepicker({dateFormat: 'dd/mm/yy', changeMonth: true, changeYear: true, yearRange: '-1:+10'});
+        });
+    </script>
+    {% endblock %}
+<!-- endScript -->
+{% block contenedor %}
+   
+<form id="formulario" class="form-horizontal" method="post" action="">
+    {% csrf_token %}
+        <fieldset>
+            <legend>Seleccion de fechas </legend>
+                {% for field in formulario %}
+                        {{ field.errors }}
+                        <div class="control-group">
+                            {{ field.label_tag }}
+                        <div class="controls">
+                            {{ field }}
+                        </div>
+                    </div>
+                {% endfor %}
+            <div class="controls">
+                <button type="submit" class="btn btn2">Enviar</button>
+            </div>
+        </fieldset>
+    </form>
+    <script type="text/javascript">
+        $('label').addClass('control-label')
+    </script>
+{% endblock %}
+
+
+

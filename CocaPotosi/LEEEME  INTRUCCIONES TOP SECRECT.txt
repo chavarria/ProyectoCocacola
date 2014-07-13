@@ -1,0 +1,16 @@
+Inge le mandamos este último avances aumentamos la facturación generando un numero de factura 
+ dinámico según a la reserva lo puede ver en el administrador registrándose previamente 
+también aumentamos los filtros a nuestros reportes ahora puede ver los reportes desde un rango 
+de fechas introducidas en el calendario introducidas por el administrador esperamos  sea lo que 
+nos pidió y llegar a las expectativas trazadas en los módulos 
+
+
+
+
+NOTA.- la base de datos es  cocacolapotosi
+
+
+MANUEL CHAVARRIA CHOQUE
+ROSMERY ALARCON LAURA
+LUIS HAROLD TERRAZAS  QUISPE	
+GRUPO 18

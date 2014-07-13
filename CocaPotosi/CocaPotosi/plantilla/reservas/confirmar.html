@@ -1,0 +1,51 @@
+
+
+<style type="text/css">
+	p.informacion{
+		font-size: 16px;
+		font-family: Arial;
+	}
+	td{
+		width: 100px;
+		font-family: Arial;
+		font-size: 14px;
+	}
+	tr:hover{
+		background: red ;
+	}
+	div{
+		border: 5px;
+		box-shadow: 0px,10px ,5px;
+
+	}
+</style>
+<div id="tab"style="border:solid 1px black;padding:15px;">
+	<p class="informacion"><strong>Reserva #: </strong> {{reserva.id}}</p>
+	<p class="informacion"><strong>Precio Total: </strong> {{reserva.precio_total}}</p>
+	<p class="informacion"><strong>Cedula Cliente: </strong> {{reserva.cliente.ci}}</p>
+	<p class="informacion"><strong>Cliente: </strong>{{reserva.cliente.nombre}} {{reserva.cliente.apellidos}}</p>
+</div>
+<h2>Productos Seleccionados</h2>
+<table>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Cantidad Reservada</th>
+			<th>Precio de Reserva</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for d in detallereserva %}
+			<tr>
+				<td>{{forloop.counter}}</td>
+				<td>{{d.producto.nombre}}</td>
+				<td>{{d.cantidad}}</td>
+				<td>{{d.precio}}</td>	
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<br><br>
+<center><a href="">CONFIRMAR</a></center>
+

@@ -30,8 +30,28 @@
         }
     </style>
     <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+      <script >
+        function crearcampo(){
 
+          var opcion=$("#sopcion").val();
+          if (opcion=="1"){
+              html="<input type='date' name='tfecha' id='tfecha'>"
+              $("#campo").html(html);
+          }
 
+          if (opcion=="2"){
+    
+              $("#campo").html("");
+          }
+          if (opcion=="3"){
+    
+          $("#campo").html("");
+          }
+  
+        }
+</script>
+
+    
   </head>
 
   <body>
@@ -62,9 +82,10 @@
                     REPORTES
                 <b class="caret"></b>
                 </a>
+
                 <ul class="dropdown-menu">
-                <li><a href="/productos/pdf/">Reportes Productos</a></li>
-                  <li><a href="/reserva/pdf/">Reporte reservas</a></li>
+                <li><a href="almacen/pdf/">Reportes Productos</a></li>
+                  <li><a href="/seleccion">Reporte reservas</a></li>
                   <li><a href="/almacen/pdf/">Reporte Almacen</a></li>
                   <li><a href="/detalle/pdf/">Reportes</a></li>
                 </ul>
@@ -142,4 +163,7 @@
 
 
   </body>
+
+
+
 </html>

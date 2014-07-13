@@ -2,8 +2,9 @@
 {% block contenedor %}
 <style type="text/css">
 	p.informacion{
-		font-size: 16px;
+		font-size: 18px;
 		font-family: Arial;
+
 	}
 	td{
 		width: 100px;
@@ -13,26 +14,43 @@
 	tr:hover{
 		background: red ;
 	}
-	div{
-		border: 5px;
-		box-shadow: 0px,10px ,5px;
 
+	table{
+		border-radius: 5px;
+		background-color: rgb(216,213,213);
+		text-align: center;
+		box-shadow:0 0 10px 5px black,-20px 0 30px red;
+		padding: 10px;
 	}
 </style>
-<div id="tab"style="border:solid 1px black;padding:15px;">
-	<p class="informacion"><strong>Reserva #: </strong> {{reserva.id}}</p>
-	<p class="informacion"><strong>Precio Total: </strong> {{reserva.precio_total}}</p>
-	<p class="informacion"><strong>Cedula Cliente: </strong> {{reserva.cliente.ci}}</p>
+
+<div style="padding-left: 80%;"><strong >Casa Matriz: </strong> La Paz-Bolivia<br>
+<ul><strong>Nit: </strong> 10004567002</ul>
+<strong>Telefonos:</strong> 6226453-6235641<br></div>
+<div style="border:solid 3px black;padding:5px;border-radius: 15px;background-color: rgb(216,213,213);lefth: 100px;">
+	
+	<p class="informacion" style="text-align: center;"><strong>FACTURA Nº: 0000 </strong> {{reserva.id}}</p>
+	<p class="informacion"><strong>C.I./NIT: </strong> {{reserva.cliente.ci}}</p>
 	<p class="informacion"><strong>Cliente: </strong>{{reserva.cliente.nombre}} {{reserva.cliente.apellidos}}</p>
+	<p class="informacion"><strong>Precio Total: </strong> {{reserva.precio_total}}</p>
+	
+	
+	
+
+	
 </div>
-<h2>Productos Seleccionados</h2>
+
+<h2>DETALLE DEL PRODUCTO</h2>
+
 <table>
 	<thead>
+
 		<tr>
 			<th>#</th>
 			<th>Nombre</th>
 			<th>Cantidad Reservada</th>
 			<th>Precio de Reserva</th>
+
 		</tr>
 	</thead>
 	<tbody>
@@ -46,10 +64,13 @@
 		{% endfor %}
 	</tbody>
 </table>
+<br>
+<p class="informacion"><strong>Precio Total a Cobrar:......................................................................................... </strong> {{reserva.precio_total}}</p>
 
 
-
-<h2>Seleccione Un Producto</h2>
+<br><br><br><br><br>
+<center><h2>Seleccione Un Producto</h2></center>
+<center>
 <table>
 	<thead>
 		<tr>
@@ -69,10 +90,16 @@
 				{%endfor%}
 				<td>
 					<a href="{% url 'reserva.views.cantidad' reserva.id p.id %}">Seleccionar</a>
-				</td>	
+				</td>
+
 			</tr>
 		{% endfor %}
 	</tbody>
+
 </table>
+</center>
+<br><br>
+<center><a href="javascript:print()">CONFIRMAR</a></center>
+<center><a href="/">SALIR</a></center>
 
 {% endblock %}

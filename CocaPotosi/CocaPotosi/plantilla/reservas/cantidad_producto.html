@@ -4,6 +4,7 @@
 	p.informacion{
 		font-size: 16px;
 		font-family: Arial;
+
 	}
 	td{
 		width: 100px;
@@ -26,7 +27,10 @@
 <form action="" method="post">{% csrf_token %}
 	{{formulario.as_p}}
 	<button type="submit">Enviar</button>
+	
 </form>
+
+
 <script type="text/javascript">
   $('#id_cantidad').keyup(function(event){
     var cantidad = $('#id_cantidad').val();

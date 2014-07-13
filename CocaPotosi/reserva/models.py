@@ -16,3 +16,8 @@ class DetalleReserva(models.Model):
 	producto = models.ForeignKey(model_producto)
 	def __unicode__(self):
 		return self.producto.nombre
+
+class Factura(models.Model):
+	idreserva = models.ForeignKey(Reserva)
+	def __unicode__(self):
+		return self.idreserva

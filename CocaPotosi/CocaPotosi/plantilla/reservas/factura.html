@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC >
+<html >
+<head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>venta entradas</title>
+<link href="{{STATIC_URL}}estilos de visualizacion normal.css" rel="stylesheet" type="text/css">
+</head><body>
+<div id="container"><div id="header"><div id="hotel_logo">
+<table border=''>
+<tr>
+
+<td height='' width='75%'>
+<div align='left'>
+<p ><strong>Fecha de Limite Emision: 17/07/2014</strong></p>
+<p >Fecha de Emision:&nbsp;{{hoy|date:"d"}}/{{hoy|date:"m"}}/{{hoy|date:"Y"}}</p>
+<p>Potosi - Bolivia</p>
+</div>
+</td>
+
+<td height='' width='75%'>
+<div align='right'>
+<p><strong>Coca Cola Company</strong></p>
+<p>NIT: 10008685</p>
+<p>Teléfono de contacto: 72401369</p>
+</div>
+</td>
+
+</tr>
+</table>
+</div></div><center><h1>FACTURA<br>Nº 0000{{f.id}}</h1>Autorizacion Nº 500300780604<br>ORIGINAL CLIENTE<br><br></center>
+
+<!-- Client --><h2>INFORMACION DEL CLIENTE</h2>
+<table class="w100">
+<thead>
+<th align='left'>Nombres</th>
+<th align='left'>Apellidos</th>
+</thead>
+<tbody>
+<tr >
+<td valign='middle' height='80%' style="border-width: 0.5px;border: solid; border-color:black;">{{res.cliente.nombre}}</td>
+<td valign='middle' height='80%' class="noBorderLeft" style="border-width: 0.5px;border: solid; border-color:black;">{{res.cliente.apellidos}}</td>
+</tr>
+<tbody>
+</table>
+<br />
+<!-- Informacion del cliente -->
+<table class="w100">
+<thead>
+<th align='left'>CI/NIT</th>
+<th align='left'>Teléfono</th>
+
+</thead>
+<tbody>
+<tr>
+<td class="w30" style="border-width: 0.5px;border: solid; border-color:black;">{{res.cliente.ci}}</td>
+<td class="w30 noBorderLeft" style="border-width: 0.5px;border: solid; border-color:black;">{{res.cliente.telefono}}</td>
+
+</tr>
+<tbody>
+</table>
+<br />
+
+<br />
+<br />
+
+<!-- RESULTADO FINAL --><!-- FIRMA Y PIE -->
+
+
+<h2>DETALLE DE VENTA</h2>
+<table class="w100">
+<thead>
+<th align='left'>Producto</th>
+<th align='left'>Cantidad</th>
+<th align='left'>precio unidad</th>
+</thead>
+<tbody>
+<!-- Fix inconsistencia de datos encontrada en el monterilla booking #82748 --><tr>
+
+
+        <td style="border-width: 0.5px;border: solid; border-color:black;">{{detres.producto}}</td>
+        <td class="noBorderLeft" style="border-width: 0.5px;border: solid; border-color:black;">{{detres.cantidad}}</td>
+        <td class="w10 noBorderLeft" style="border-width: 0.5px;border: solid; border-color:black;">{{p_uni}}</td>
+
+</tr>
+<tbody>
+</table>
+<br />
+<br /><!-- SERVICIOS -->
+<!-- ######################################################################### --><!-- ######################################################################### -->
+<!-- ABONOS -->
+<!-- ABONOS -->
+<!-- ######################################################################### -->
+<!-- SUB TOTAL SERVICIOS -->
+
+<br />
+<!-- SUB TOTAL SERVICIOS --><!-- RESULTADO FINAL -->
+<table class="w100">
+<thead>
+<th class="noBorderTop"></th>
+<th class="alignPrice" align='left'>total pago</th>
+</thead>
+<tbody>
+<tr>
+<td class="w80 noBorder"></td>
+<td  class="w20 noBorderLeft alignPrice totalPrice" style="border-width: 0.5px;border: solid; border-color:black;">{{res.precio_total}}
+</td>
+</tr>
+<tbody>
+</table><br><br><br><br><br><br>
+<!-- RESULTADO FINAL --><!-- FIRMA Y PIE -->
+<p>La reproduccion total o parcial y/o el uso no autorizado de esta nota fiscal constituye un delito a ser sancionado conforme a LEY</p>
+
+
+<script type="text/javascript">
+/*<![CDATA[*/
+// window.print();
+/*]]>*/
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-1.newrelic.com","e8bab51149","2286018","cQ5eRxFWDwgGFBpaXV0KWV0ESkwUEQ9bTA==",0,263,new Date().getTime(),"","","","",""]);}</script></body>
+</html>
+

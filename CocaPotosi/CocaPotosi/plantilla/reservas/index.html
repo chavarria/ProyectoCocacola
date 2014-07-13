@@ -4,26 +4,45 @@
 	p{
 		font-size: 20px;
 	}
+	table{
+
+		border-radius: 10px;
+		font-size:20px; 
+		text-align: center;
+	}
 </style>
 
 {% for p in productos %}
-<table class="table" stile="background-color:rgb(216,213,213);">
+<center>
+<table width="40%" class="table" style="background-color: rgb(216,213,213);"align="center">
 <theader>
-<tr>
-<p>
- <strong>Nombre: </strong></th>{{p.nombre}}
-</p>
+	<tr>
+		
+			 <th><strong>Nombre: </strong></th>
+			<th><strong>Cantidad: </strong></th>
+			<th>Sabor</th>
+			<th>Precio</th>
+			<th><strong>Imagen: </strong></th>
+
+			<br>
+			 {% for a in p.model_almacen_set.select_related.all %}
+			
+	</tr>
+</theader>
+<tbody>
+		<td>{{p.nombre}}</td>
+		<td>{{a.stock}}</td>
+		<td>{{p.sabor}}</td>
+		<td>{{p.precio}}</td>
+		<td><img src="{{MEDIA_URL}}{{p.fotografia}}" width='150px' height="150px"></td>
+		{%empty%}
+		<td>No tiene Almacen</td>  
+			  {%endfor%}
+			{% endfor %}
+		<a href="{% url 'reserva.views.clientes' %}">Crear Reserva</a>
+</tbody>
+
   
-  {% for a in p.model_almacen_set.select_related.all %}
-    <p>
-      <strong>Cantidad: </strong>{{a.stock}}
-    </p>
-  {%empty%}
-  <p>No tiene Almacen</p>
-  {%endfor%}
-{% endfor %}
-</tr>
-<p>
-  <h1><a href="{% url 'reserva.views.clientes' %}">Crear Reserva</a></h1>
-</p>
+
 {% endblock %}
+</center>
